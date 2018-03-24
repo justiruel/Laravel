@@ -10,8 +10,8 @@ http://localhost:9000/project-latihan/public/
 
 
 # Basic Laravel 
-Routing (routes/web.php)
-View (resources/views)
+- Routing (routes/web.php)
+- View (resources/views)
 
 # Migration 
 ## Setting Database
