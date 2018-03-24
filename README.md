@@ -31,6 +31,11 @@ hasilnya bisa dilihat di database/migrations
 ## error yang mungkin ditemui
 Laravel 5.4: Specified key was too long error : https://laravel-news.com/laravel-5-4-key-too-long-error
 
+# Eloquent Model
+```
+php artisan make:model Anggota
+```
+Hasilnya : app/Anggota.php (Model)
 # check Version
 http://www.elcoderino.com/check-laravel-version/
 
