@@ -46,3 +46,4 @@ http://www.elcoderino.com/check-laravel-version/
 baseurl
 uri segment
 .htaccess
+pagination
