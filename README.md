@@ -42,6 +42,14 @@ Hasilnya : app/Anggota.php (Model)
 # Blade
 - Untuk membuat suatu view bisa di isi dengan syntaxt blade, rename view name menjadi <b>*.blade.php</b>
 - .blade view akan di-render menjadi php native untuk selanjutnya di eksekusi, lokasi render ada di <b>storage/framework/views/9316a91367544223c7eb6e4c3e30a8d44b85c1d9.php</b> 
+- untuk menggunakan form helper semisal :
+```
+{{Form::textarea('notes')}}
+
+hasil render ->
+<textarea name="notes" cols="50" row="10"></textarea>
+```
+lakukan perintah : composer require "illuminate/html":"5.0.*"
 
 # check Version
 http://www.elcoderino.com/check-laravel-version/
