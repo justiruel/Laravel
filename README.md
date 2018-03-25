@@ -67,6 +67,9 @@ http://www.elcoderino.com/check-laravel-version/
 # REF.
 - https://laravel.com/docs/5.4/views#passing-data-to-views
 
+# belajar API
+-https://www.youtube.com/watch?v=4pc6cgisbKE
+
 # cari tau
 baseurl
 uri segment
