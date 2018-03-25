@@ -12,6 +12,8 @@ http://localhost:9000/project-latihan/public/
 # Basic Laravel 
 - Routing (routes/web.php)
 - View (resources/views)
+- Model (app/)
+- Controller (app/Http/Controllers)
 
 # Migration 
 ## Setting Database
@@ -36,6 +38,7 @@ Laravel 5.4: Specified key was too long error : https://laravel-news.com/laravel
 php artisan make:model Anggota
 ```
 Hasilnya : app/Anggota.php (Model)
+
 # check Version
 http://www.elcoderino.com/check-laravel-version/
 
