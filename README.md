@@ -51,6 +51,13 @@ hasil render ->
 ```
 lakukan perintah : composer require "illuminate/html":"5.0.*"
 
+# Controller 
+Generate Controller baru
+```
+php artisan make:controller cobaController --resource
+```
+ket. --resource digunakan agar controller otomatis menggenerate method index(),create(),show(), dll.
+
 # check Version
 http://www.elcoderino.com/check-laravel-version/
 
