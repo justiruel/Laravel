@@ -57,6 +57,9 @@ http://www.elcoderino.com/check-laravel-version/
 # macam-macam error
 - Laravel 5.4: Specified key was too long error : https://laravel-news.com/laravel-5-4-key-too-long-error
 
+# REF.
+- https://laravel.com/docs/5.4/views#passing-data-to-views
+
 # cari tau
 baseurl
 uri segment
