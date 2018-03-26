@@ -112,6 +112,19 @@ protected function mapApiRoutes()
 - setting database di .ENV
 - buka php.ini cari dengan keyword pgsql, aktifkan semuanya, ulangi perintah php artisan serve
 
+# install app composer (like 'npm install xx --save')
+```
+composer require doctrine/dbal
+```
+hasil instalasi masuk di folder <b>vendor</b>
+
+# Reinstall semua data yang ada di composer.json
+Biasanya dilakukan bila folder vendor masuk ke gitignore, maka sesudah pull ketik perintah berikut :
+```
+composer update 
+```
+
+
 # cari tau
 baseurl
 uri segment
