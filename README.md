@@ -65,6 +65,7 @@ http://www.elcoderino.com/check-laravel-version/
 - php artisan make:resource coba   --> hasilnya akan muncul di App
 - routes/api.php --> arahkan router
 - contoh kasus cobaApiController
+- cara akses : http://localhost:9000/project-latihan/public/api/cobaApi
 
 # Auth
 - php artisan make:auth
