@@ -68,7 +68,8 @@ http://www.elcoderino.com/check-laravel-version/
 - cara akses : http://localhost:9000/project-latihan/public/api/cobaApi
 
 # Auth
-- php artisan make:auth
+- php artisan make:auth, maka login register forgot pasword akan otomatis jadi
+- cara akses http://localhost:9000/project-latihan/public/home
 
 # macam-macam error
 - Laravel 5.4: Specified key was too long error : https://laravel-news.com/laravel-5-4-key-too-long-error
