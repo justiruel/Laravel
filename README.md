@@ -66,6 +66,26 @@ http://www.elcoderino.com/check-laravel-version/
 - routes/api.php --> arahkan router
 - contoh kasus cobaApiController
 - cara akses : http://localhost:9000/project-latihan/public/api/cobaApi
+- kenapa saat akses api harus ada prefix api? public/<b>API</b>/cobaApi, jawabannya coba buka RouteServiceProvider.php
+```
+protected function mapApiRoutes()
+    {
+        Route::prefix('api')
+             ->middleware('api')
+             ->namespace($this->namespace)
+             ->group(base_path('routes/api.php'));
+    }
+```
+jika tidak ingin ada prefix api maka rubah jadi 
+```
+protected function mapApiRoutes()
+    {
+        Route::middleware('api')
+             ->namespace($this->namespace)
+             ->group(base_path('routes/api.php'));
+    }
+```
+
 
 # API AUTH
 - https://www.youtube.com/watch?v=pW2SC0WFmVY
