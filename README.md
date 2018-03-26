@@ -67,6 +67,9 @@ http://www.elcoderino.com/check-laravel-version/
 - contoh kasus cobaApiController
 - cara akses : http://localhost:9000/project-latihan/public/api/cobaApi
 
+# API AUTH
+- https://www.youtube.com/watch?v=pW2SC0WFmVY
+
 # Auth
 - php artisan make:auth, maka login register forgot pasword akan otomatis jadi
 - coba akses  http://localhost:9000/project-latihan/public/halamanKita/1 , cek di routes/web.php pada halaman tersebut method Showhalaman kena auth jadi misal di akses dan belum login akan terlempar ke login form
