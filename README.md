@@ -17,7 +17,7 @@ http://localhost:9000/project-latihan/public/
 
 # Migration 
 ## Setting Database
-- config/database.php
+- config/database.php (optional)
 - .ENV
 ## Proses Migrasi
 ```
@@ -103,6 +103,14 @@ protected function mapApiRoutes()
 
 # belajar API
 - https://www.youtube.com/watch?v=4pc6cgisbKE
+
+# Eksekusi laravel
+# cara koneksi ke psotgree
+- php artisan serve
+
+# cara koneksi ke psotgree
+- setting database di .ENV
+- buka php.ini cari dengan keyword pgsql, aktifkan semuanya, ulangi perintah php artisan serve
 
 # cari tau
 baseurl
