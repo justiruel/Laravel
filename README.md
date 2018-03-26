@@ -94,6 +94,7 @@ protected function mapApiRoutes()
 
 # API AUTH
 - https://www.youtube.com/watch?v=pW2SC0WFmVY
+- https://www.itechempires.com/2017/09/laravel-5-5-api-user-authentication-passport-package/
 
 # Auth
 - php artisan make:auth, maka login register forgot pasword akan otomatis jadi
