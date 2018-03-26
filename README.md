@@ -62,9 +62,12 @@ ket. --resource digunakan agar controller otomatis menggenerate method index(),c
 http://www.elcoderino.com/check-laravel-version/
 
 # API
-- php artisan make:resource coba
+- php artisan make:resource coba   --> hasilnya akan muncul di App
 - routes/api.php --> arahkan router
 - contoh kasus cobaApiController
+
+# Auth
+- php artisan make:auth
 
 # macam-macam error
 - Laravel 5.4: Specified key was too long error : https://laravel-news.com/laravel-5-4-key-too-long-error
