@@ -124,9 +124,9 @@ Biasanya dilakukan bila folder vendor masuk ke gitignore, maka sesudah pull keti
 composer update 
 ```
 
-
 # cari tau
 baseurl
 uri segment
 .htaccess
 pagination
+Faker Generator
