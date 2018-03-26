@@ -37,7 +37,11 @@ Laravel 5.4: Specified key was too long error : https://laravel-news.com/laravel
 ```
 php artisan make:model Anggota
 ```
-Hasilnya : app/Anggota.php (Model)
+Hasilnya : app/Anggota.php (Model)<br/>
+Bisa juga hasilnya diletakkan di folder Models caranya :
+```
+php artisan make:model Models/Anggota
+```
 
 # Blade
 - Untuk membuat suatu view bisa di isi dengan syntaxt blade, rename view name menjadi <b>*.blade.php</b>
