@@ -69,7 +69,8 @@ http://www.elcoderino.com/check-laravel-version/
 
 # Auth
 - php artisan make:auth, maka login register forgot pasword akan otomatis jadi
-- cara akses http://localhost:9000/project-latihan/public/home
+- coba akses  http://localhost:9000/project-latihan/public/halamanKita/1 , cek di routes/web.php pada halaman tersebut method Showhalaman kena auth jadi misal di akses dan belum login akan terlempar ke login form
+- coba akses http://localhost:9000/project-latihan/public/noAuth, menu ini tidak kena auth jadi walaupun tanpa login bisa di akses.
 
 # macam-macam error
 - Laravel 5.4: Specified key was too long error : https://laravel-news.com/laravel-5-4-key-too-long-error
