@@ -42,6 +42,7 @@ Bisa juga hasilnya diletakkan di folder Models caranya :
 ```
 php artisan make:model Models/Anggota
 ```
+Hasilnya : app/Models/Anggota.php (Model)<br/>
 
 # Blade
 - Untuk membuat suatu view bisa di isi dengan syntaxt blade, rename view name menjadi <b>*.blade.php</b>
