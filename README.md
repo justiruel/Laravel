@@ -93,8 +93,35 @@ protected function mapApiRoutes()
 
 
 # API AUTH
-- https://www.youtube.com/watch?v=pW2SC0WFmVY
-- https://www.itechempires.com/2017/09/laravel-5-5-api-user-authentication-passport-package/
+- https://www.codepolitan.com/api-otentikasi-menggunakan-passport-laravel-59fc1153796b9
+### Tambahan  
+- Terakhir sebelum coba running di postman, ketik "php artisan make:auth"
+- Ketika coba di postman saat akses http://127.0.0.1:8000/api/details jika tidak menyertakan token alias unauthorized, dia akan redirent ke halaman web login seperti ini :
+```
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="sph4rbYcbJi9KWUPgHFaR4YvNMHsalgmrAP4LAzS">
+        <title>Laravel</title>
+        <!-- Scripts -->
+        <script src="http://127.0.0.1:8000/js/app.js" defer></script>
+```
+Agar outputnya berupa json seperti : 
+```
+{
+    "message": "Unauthenticated."
+}
+```
+pada Header tambahkan 
+```
+Accept:application/json
+Content-Type:application/json
+Authorization:Bearer <token>
+```
 
 # Auth
 - php artisan make:auth, maka login register forgot pasword akan otomatis jadi
