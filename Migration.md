@@ -1,5 +1,5 @@
 ## Rollback Migration
-Me-rollback migrasi terakhir, sehingga migrasi terakhir bisa didefinisikan ulang
+Me-rollback migrasi terakhir, ketika menjalankan perintah rollback, sejatinya kita mengeksekusi function down() pada file migration yang dituju
 ```
 php artisan migrate:rollback
 ```
@@ -15,5 +15,12 @@ public function up()
             //Add Column/field
             $table->string('votes')->nullable(); 
         });
+        
+        public function down()
+    {
+        Schema::table('anggota', function (Blueprint $table) {
+            $table->dropColumn('votes');
+        });
+    }
 }
 ```
