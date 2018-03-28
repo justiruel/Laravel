@@ -1,5 +1,5 @@
 ## Rollback Migration
-Me-rollback migrasi terakhir, artinya misal dalam migrasi add drop column maka drop column akan kembali eksis begitu juga sebaliknya
+Me-rollback migrasi terakhir, sehingga migrasi terakhir bisa didefinisikan ulang
 ```
 php artisan migrate:rollback
 ```
