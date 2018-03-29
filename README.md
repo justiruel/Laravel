@@ -63,6 +63,18 @@ php artisan make:controller cobaController --resource
 ```
 ket. --resource digunakan agar controller otomatis menggenerate method index(),create(),show(), dll.
 
+Untuk routingnya misal kita tidak ingin ribet mengetik satu2 routing untuk index(), create(), dll. kita bisa mengetikkan di routes/web.php atau routes/api.php
+```
+Route::resource('/home', 'HomeController');
+```
+catatan. untuk method yang kita tambahkan sendiri (tidak iku ke generate saat make:controller), maka kita juga harus buat routenya secara manual (tidak ikut kegenerate)
+
+
+untuk mengecek list route yang sudah tercipta ketik 
+```
+php artisan route:list
+```
+
 # check Version
 http://www.elcoderino.com/check-laravel-version/
 
