@@ -1,3 +1,4 @@
+ ```
  /**
      * @SWG\Get(
      *   path="/customer/{customerId}/rate",
@@ -41,3 +42,4 @@
      * )
      *
      */
+```
