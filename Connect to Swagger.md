@@ -1,6 +1,6 @@
 # 1
 ```
-composer update darkaonline/l5-swagger
+composer require darkaonline/l5-swagger
 ```
 # 2
 You need to register the L5SwaggerService provider in config/app.php using the line 
