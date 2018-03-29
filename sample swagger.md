@@ -1,4 +1,18 @@
- ```
+pasang diatas controller
+```
+/**
+ * @SWG\Swagger(
+ *   basePath="/api",
+ *   @SWG\Info(
+ *     title="Uji Coba Swagger",
+ *     version="1.0.0"
+ *   )
+ * )
+ */
+```
+
+pasang diatas method
+```
  /**
      * @SWG\Get(
      *   path="/customer/{customerId}/rate",
