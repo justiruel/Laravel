@@ -9,7 +9,7 @@ L5Swagger\L5SwaggerServiceProvider::class
 ```
 # 3
 ```
-php artisan l5-swagger:publish
+php artisan vendor:publish
 ```
 # 4.  Letakkan comment berikut di atas controller
 ```
@@ -61,7 +61,7 @@ L5_SWAGGER_GENERATE_ALWAYS=true
 ```
 or
 ```
-php artisan l5-swagger:generate
+php artisan vendor:generate
 ```
 # 7. Eksekusi
 ```
