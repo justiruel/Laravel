@@ -61,7 +61,7 @@ L5_SWAGGER_GENERATE_ALWAYS=true
 ```
 or
 ```
-php artisan vendor:generate
+php artisan l5-swagger:generate
 ```
 # 7. Eksekusi
 ```
