@@ -8,5 +8,6 @@ dd(DB::getQueryLog()); // or print_r(DB::getQueryLog());
 # Get timestamp
 ```
 use Carbon\Carbon;
+...
 $current_time = Carbon::now()->toDateTimeString();
 ```
