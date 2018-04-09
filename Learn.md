@@ -17,7 +17,7 @@ $current_time = Carbon::now()->toDateTimeString();
 ```
 bcrypt($new_password)
 ```
-### untuk mengecek password yang sudah di encrypt di database dengan bcrypt
+### untuk mengecek password yang sudah di encrypt (dengan bcrypt) di database 
 ```
 if (password_verify($old_password,$user_customer->password)){
     DB::table('user_customer')
