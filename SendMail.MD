@@ -13,7 +13,7 @@ MAIL_FROM_NAME="Sky Parking"
 ### Jika error saat sendmail
 - ikuti langkah di sini : https://stackoverflow.com/a/42558904
 - "php artisan config:cache" to update the env variables!
-Jika masih error, buka "D:\PROJECT\VISIONET\WEB\BACKEND\GITLAB\ParkingSystemAPI\config\mail.php", tambahkan
+- Jika masih error, buka "D:\PROJECT\VISIONET\WEB\BACKEND\GITLAB\ParkingSystemAPI\config\mail.php", tambahkan
 ```
 return [
 ...
