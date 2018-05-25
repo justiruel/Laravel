@@ -179,7 +179,7 @@ untuk run harus pakai :
 php -S localhost:8000
 cara akses : http://localhost:8000/
 ```
-Gabisa pakai :
+tidak bisa pakai :
 ```
 php artisan serve
 ```
