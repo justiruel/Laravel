@@ -174,8 +174,16 @@ composer update
 Rename server.php in your Laravel root folder to index.php
 Copy the .htaccess file from /public directory to your Laravel root folder.
 ```
-untuk run harus pakai : php -S localhost:8000, gabisa pakai php artisan serve
-<br/>cara lain : taruh di dalam xampp/htdocs, akses http://localhost:9000/ParkingSystemWeb/
+untuk run harus pakai : 
+```
+php -S localhost:8000
+cara akses : http://localhost:8000/
+```
+Gabisa pakai :
+```
+php artisan serve
+```
+Cara lain : taruh di dalam xampp/htdocs, cara akses http://localhost:9000/ParkingSystemWeb/
 
 # cari tau
 baseurl
