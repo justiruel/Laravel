@@ -169,6 +169,12 @@ Biasanya dilakukan bila folder vendor masuk ke gitignore, maka sesudah pull keti
 composer update 
 ```
 
+# menghilangkan /public saat akses url
+```
+Rename server.php in your Laravel root folder to index.php
+Copy the .htaccess file from /public directory to your Laravel root folder.
+```
+untuk run harus pakai : php -S localhost:8000, gabisa pakai php artisan serve
 # cari tau
 baseurl
 uri segment
