@@ -1,4 +1,4 @@
-## Middleware akan di eksekusi sebelum controller tujuan, dengan middleware kita juga dapat memodifikasi request $_post & $_get, dll
+## Middleware akan di eksekusi sebelum controller tujuan, dengan middleware kita juga dapat memodifikasi request $_post & $_get, dll. sebelum digunakan oleh controller tujuan
 - php artisan make:middleware Coba
 - buka app/Http/Kernel.php, ketik :
 ```
