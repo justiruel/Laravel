@@ -1,3 +1,4 @@
+## Middleware akan di eksekusi sebelum controller tujuan, dengan middleware kita juga dapat memodifikasi request $_post & $_get, dll
 - php artisan make:middleware Coba
 - buka app/Http/Kernel.php, ketik :
 ```
@@ -14,6 +15,8 @@ if ($request->input('name') == "ronaldo"){
 }
 ```      
 - buka router, ketik :
+```
 Route::group(['middleware' => 'coba'], function(){
     Route::get('/pagination','WelcomeController@pagination');
 });
+```
