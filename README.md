@@ -134,6 +134,33 @@ Accept:application/json
 Content-Type:application/json
 Authorization:Bearer <token>
 ```
+### Catatan
+Table User dapat diganti, caranya :
+- buat table customerkus
+- buat eloquent model,  php artisan make:model Customerku --> model ini akan mereferensi ke table customerkus
+- config/auth.php, jadikan seperti ini :
+```
+'providers' => [
+        'users' => [
+            'driver' => 'eloquent',
+            'model' => App\Customerku::class,
+        ],
+    ],
+```
+- Pada register, sesuaikan eloquent model, rubah dari User jadi Customerku :
+```
+public function register(Request $request)
+    {
+        ......
+        $input = $request->all();
+        $input['password'] = bcrypt($input['password']);
+        $user = Customerku::create($input);
+        .....
+```
+### jika ingin auth mereferensi ke beberapa table contoh : user dan guest table
+```
+https://github.com/sfelix-martins/passport-multiauth
+```
 
 # Auth
 - php artisan make:auth, maka login register forgot pasword akan otomatis jadi
