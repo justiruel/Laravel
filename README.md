@@ -157,6 +157,7 @@ public function register(Request $request)
         $user = Customerku::create($input);
         .....
 ```
+- contoh dapat dilihat disini : D:\PROJECT\RISET\Laravel\auth-api
 ### jika ingin auth mereferensi ke beberapa table contoh : user dan guest table
 ```
 https://github.com/sfelix-martins/passport-multiauth
