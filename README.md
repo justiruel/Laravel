@@ -229,6 +229,8 @@ echo env('TRY_ENV','')."<br/>";
 # Akses request parameter (URL/?name=jjj)
 
 ```
+use Illuminate\Http\Request;
+....
 echo \Request::input('name');
 atau
 echo $request->input('planet');
