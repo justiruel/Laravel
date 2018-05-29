@@ -330,10 +330,17 @@ digunakan agar jika dalam maintenance mode ("php artisan down") aplikasi tidak t
 # Maintenance mode
 
 ```
-php artisan down
-php artisan up
+php artisan down --> maintenance mode
+php artisan up --> up mode
 ```
-
+catatan : kita dapat membuat tampilan custom untuk maintenance mode caranya buat file : resources/views/errors/503.blade.php
+isi terserah contoh :
+```
+@extends('errors::layout')
+@section('title', 'Service Unavailable')
+@section('message', 'Be right back.')
+<h1 style="background-color: aqua">Asek asek</h1>
+```
 
 
 
