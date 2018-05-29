@@ -272,6 +272,17 @@ versi blade
 {{ route('admin.home') }}
 result : http://localhost:8000/NamingRoute
 ```
+
+# Akses data di config/app.php
+config/app.php
+```
+'coba' => 'http://google.com'
+```
+controller
+```
+echo onfig('app.coba');
+result : http://google.com
+```
 # cari tau
 .htaccess
 Faker Generator
