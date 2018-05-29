@@ -238,11 +238,40 @@ atau
 echo $request->input('planet');
 
 ```     
+# Akses URI SEGMENT
+```
+contoh : http://localhost:8000/get_env
+echo request()->segment(1);
+//result : get_env
+```
 
-
+# BASE URL
+## BY URL
+```
+$var = 12;
+echo url("/posts/{$var}");
+result : http://localhost:8000/posts/12
+```
+versi blade 
+```
+{{url('/segment')}}
+result : http://localhost:8000/segment
+```
+## BY ROUTE NAME
+Router
+```
+Route::get('/NamingRoute', ['uses' => 'WelcomeController@NamingRoute', 'as' => 'admin.home']);
+```
+Controller
+```
+echo route('admin.home')
+result : http://localhost:8000/NamingRoute
+```
+versi blade
+```
+{{ route('admin.home') }}
+result : http://localhost:8000/NamingRoute
+```
 # cari tau
-baseurl
-uri segment
 .htaccess
-pagination
 Faker Generator
