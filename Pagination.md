@@ -2,6 +2,8 @@
 
 controller
 ```
+use Illuminate\Support\Facades\DB;
+...
  public function pagination()
     {
         $users = DB::table('anggota')->paginate(3);
