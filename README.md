@@ -280,7 +280,7 @@ config/app.php
 ```
 controller
 ```
-echo onfig('app.coba');
+echo config('app.coba');
 result : http://google.com
 ```
 # cari tau
