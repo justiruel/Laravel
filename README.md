@@ -314,7 +314,8 @@ perhatikan kode diatas, saya menambahkan
 ```
 return response()->view('errors', [], 500);
 ```
-artinya jika terjadi error apaapun maka error message tidak akan muncul sebagai gantinya halaman akan di redirect ke errors.blade.php
+artinya jika terjadi error apaapun maka error message tidak akan muncul sebagai gantinya halaman akan di redirect ke errors.blade.php<br/>
+untuk menentukan aksi berbeda setiap jenis exception, ikuti tutorial berikut : https://scotch.io/tutorials/creating-a-laravel-404-page-using-custom-exception-handlers
 
 # cari tau
 - .htaccess
