@@ -213,13 +213,17 @@ php artisan serve
 ```
 Cara lain : taruh di dalam xampp/htdocs, cara akses http://localhost:9000/ParkingSystemWeb/
 
-# Akses value dari ENV
+# Akses value dari .ENV
 
 .env
 ```
 ...
 TRY_ENV="iam just trying"
 ...
+```
+jalankan perintah 
+```
+php artisan config:cache   --> harus di eksekusi setiap memodifikasi file .env
 ```
 controller
 ```
@@ -283,6 +287,18 @@ controller
 echo config('app.coba');
 result : http://google.com
 ```
+# DEBUG MODE
+masuk .env
+```
+APP_DEBUG=false
+```
+catatan : pada production level pastikan APP_DEBUG = false, agar data sensitif tidak tampil di layar saat terjadi error
+
+# ERROR LOG
+- Buka config/logging.php disitu ada "storage_path('logs/laravel.log')" A.K.A "storage/logs/laravel.log"
+- Setiap terjadi error, error message akan tercetak di laravel.log
+- kamu dapat merubah path atau nama dari logging file
+
 # cari tau
 .htaccess
 Faker Generator
