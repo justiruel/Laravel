@@ -213,6 +213,31 @@ php artisan serve
 ```
 Cara lain : taruh di dalam xampp/htdocs, cara akses http://localhost:9000/ParkingSystemWeb/
 
+# Akses value dari ENV
+
+.env
+```
+...
+TRY_ENV="iam just trying"
+...
+```
+controller
+```
+echo env('TRY_ENV','')."<br/>";
+```
+
+# Akses request parameter (URL/?name=jjj)
+
+```
+echo \Request::input('name');
+atau
+echo $request->input('planet');
+atau
+echo $request->input('planet');
+
+```     
+
+
 # cari tau
 baseurl
 uri segment
