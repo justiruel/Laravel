@@ -299,6 +299,24 @@ catatan : pada production level pastikan APP_DEBUG = false, agar data sensitif t
 - Setiap terjadi error, error message akan tercetak di laravel.log
 - kamu dapat merubah path atau nama dari logging file
 
+# Redirect jika terjadi error
+- buka app/Exceptions/Handler.php
+```
+....
+public function render($request, Exception $exception)
+{
+        return response()->view('errors', [], 500);
+        //return parent::render($request, $exception);
+}
+....
+```
+perhatikan kode diatas, saya menambahkan 
+```
+return response()->view('errors', [], 500);
+```
+artinya jika terjadi error apaapun maka error message tidak akan muncul sebagai gantinya halaman akan di redirect ke errors.blade.php
+
 # cari tau
-.htaccess
-Faker Generator
+- .htaccess
+- Faker Generator
+- send mail
