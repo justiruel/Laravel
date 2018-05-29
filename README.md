@@ -305,7 +305,11 @@ catatan : pada production level pastikan APP_DEBUG = false, agar data sensitif t
 ....
 public function render($request, Exception $exception)
 {
-        return response()->view('errors', [], 500);
+       if ($exception instanceof MaintenanceModeException){
+            return parent::render($request, $exception);      
+        }else{
+            return response()->view('errors', [], 500);
+        }
         //return parent::render($request, $exception);
 }
 ....
@@ -316,6 +320,22 @@ return response()->view('errors', [], 500);
 ```
 artinya jika terjadi error apaapun maka error message tidak akan muncul, sebagai gantinya halaman akan di redirect ke errors.blade.php<br/>
 untuk menentukan aksi berbeda setiap jenis exception, ikuti tutorial berikut : https://scotch.io/tutorials/creating-a-laravel-404-page-using-custom-exception-handlers
+
+#### tambahan
+```
+if ($exception instanceof MaintenanceModeException){
+```
+digunakan agar jika dalam maintenance mode ("php artisan down") aplikasi tidak ter-redirect ke  errors.blade.php, sehingga maintenance mode memiliki tampilannya sendiri
+
+# Maintenance mode
+
+```
+php artisan down
+php artisan up
+```
+
+
+
 
 # cari tau
 - .htaccess
