@@ -284,7 +284,7 @@ config/app.php
 ```
 controller
 ```
-echo config('app.coba');
+echo config('app.coba'); atau Config::get('app.coba');
 result : http://google.com
 ```
 # DEBUG MODE
