@@ -54,8 +54,11 @@ Hasilnya : app/Models/Anggota.php (Model)<br/>
 hasil render ->
 <textarea name="notes" cols="50" row="10"></textarea>
 ```
-lakukan perintah : composer require "illuminate/html":"5.0.*"
-
+lakukan perintah : 
+```
+composer require "illuminate/html":"5.0.*"
+composer require laravelcollective/html
+```
 # Controller 
 Generate Controller baru
 ```
