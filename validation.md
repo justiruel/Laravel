@@ -25,7 +25,7 @@ if ($email == "root@gmail.com" && $password == "root"){
 }
 ```
 
-#View
+# View
 ```
 @if ($errors->any())
     <div class="alert alert-danger">
