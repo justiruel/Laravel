@@ -166,6 +166,16 @@ public function register(Request $request)
 https://github.com/sfelix-martins/passport-multiauth
 ```
 
+### Mengatur token expired
+app/providers/AuthServiceProvider.php
+```
+public function boot()
+{
+    .....
+  Passport::tokensExpireIn(now()->addDays(15));
+  Passport::refreshTokensExpireIn(now()->addDays(30));
+}
+```
 # Auth
 - php artisan make:auth, maka login register forgot pasword akan otomatis jadi
 - coba akses  http://localhost:9000/project-latihan/public/halamanKita/1 , cek di routes/web.php pada halaman tersebut method Showhalaman kena auth jadi misal di akses dan belum login akan terlempar ke login form
