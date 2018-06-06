@@ -19,9 +19,12 @@ if ($email == "root@gmail.com" && $password == "root"){
     \Session::put('user', 'coba');
     return redirect('/home');
 }else{
-    $validator = Validator::make([], []); 
-    $validator->errors()->add('login_fail', 'Email or password is wrong.');
-    throw new ValidationException($validator);
+    return redirect('/')->withErrors(['Email or password is wrong.']);
+    
+    //alternatif dapat juga menggunakan berikut ini.
+    //$validator = Validator::make([], []); 
+    //$validator->errors()->add('login_fail', 'Email or password is wrong.');
+    //throw new ValidationException($validator);
 }
 ```
 
