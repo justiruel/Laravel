@@ -47,3 +47,13 @@ agar tipenya sama dan foreign key berhasil
 - unsigned = tidak dapat bernilai negatif tapi memiliki range lebih besar
 
 ## intinya : antara primary key dan foreign key harus memiliki detail tipe yang sama.
+
+# Menghapus Foreign key 
+```
+$table->dropForeign('phones_user_id_foreign');
+```
+## format foreign key 
+```
+<nama table>_<nama field>_foreign
+```
+atau untuk memastikan cek aja di database
