@@ -34,7 +34,7 @@ $table->increments('id');
 ...
 ```
 
-maka pada foreignkey dibuat ->unsigned();
+maka pada foreignkey dibuat ->unsigned()
 ```
 Schema::table('phones', function (Blueprint $table) {
      $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
