@@ -69,3 +69,10 @@ atau untuk memastikan cek aja di database
 - unsigned = tidak dapat bernilai negatif tapi memiliki range lebih besar
 - cascade = jika record pada primary_key di hapus maka semua record pada table foreign_key ikut terhapus
 - restrict = record pada primary_key tidak dapat dihapus selama masih dipakai di foreign_key
+
+
+
+# Perintah paling sering digunakan 
+- php artisan make:migration create_users_table
+- php artisan migrate 
+- php artisan migrate:rollback
