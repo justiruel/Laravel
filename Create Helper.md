@@ -71,12 +71,12 @@ class SomeController extends Controller
     public function __construct()
     {
         $helper = new Helper();
-        $helper::shout('now i\'m using my helper class in a controller!!');
+        $helper->shout('now i\'m using my helper class in a controller!!');
     }
     ...
 ```
 perbedaannya :
 - use Helper as Helper;
 - $helper = new Helper();
-- $helper::shout('now i\'m using my helper class in a controller!!');
+- $helper->shout('now i\'m using my helper class in a controller!!');
 
