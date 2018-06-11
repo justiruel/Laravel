@@ -36,6 +36,12 @@ $table->increments('id');
 
 maka pada foreignkey dibuat ->unsigned()
 ```
+Schema::create('phones', function (Blueprint $table) {
+    ...
+    $table->integer('user_id')->unsigned(); //base on <model_name>_id
+    ...
+});
+        
 Schema::table('phones', function (Blueprint $table) {
      $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');  //atau ->onDelete('restrict');
 });
