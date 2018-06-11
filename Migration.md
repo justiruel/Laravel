@@ -42,9 +42,6 @@ Schema::table('phones', function (Blueprint $table) {
 ```
 agar tipenya sama dan foreign key berhasil
 
-## keterangan :
-- signed = dapat bernilai positif dan negati
-- unsigned = tidak dapat bernilai negatif tapi memiliki range lebih besar
 
 ## intinya : antara primary key dan foreign key harus memiliki detail tipe yang sama.
 
@@ -57,3 +54,12 @@ $table->dropForeign('phones_user_id_foreign');
 <nama table>_<nama field>_foreign
 ```
 atau untuk memastikan cek aja di database
+
+
+
+
+# istilah umum :
+- signed = dapat bernilai positif dan negati
+- unsigned = tidak dapat bernilai negatif tapi memiliki range lebih besar
+- cascade = jika record pada primary_key di hapus maka semua record pada table foreign_key ikut terhapus
+- restrict = record pada primary_key tidak dapat dihapus selama masih dipakai di foreign_key
