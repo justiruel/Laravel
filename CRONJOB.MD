@@ -1,0 +1,23 @@
+Cronjob
+
+# Tutorial Lengkap
+```
+https://gosigitgo.wordpress.com/2010/03/18/tutorial-penggunaan-crontab-scheduler-di-ubuntu/
+```
+
+## Langkah
+- Menjadikan .sh executable
+```
+chmod +x /home/sysadmin/Parking_Scheduler/CheckExtendBooking/CheckExtendBooking.sh
+```
+
+- ketik crontab -e
+```
+Tambahkan line :
+5 * * * * /home/sysadmin/Parking_Scheduler/CheckExtendBooking/CheckExtendBooking.sh
+```
+
+- cek list of cronjob
+```
+crontab -l
+```
