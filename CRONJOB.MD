@@ -14,7 +14,7 @@ chmod +x /home/sysadmin/Parking_Scheduler/CheckExtendBooking/CheckExtendBooking.
 - ketik sudo crontab -e
 ```
 Tambahkan line :
-5 * * * * /home/sysadmin/Parking_Scheduler/CheckExtendBooking/CheckExtendBooking.sh
+*/5 * * * * /home/sysadmin/Parking_Scheduler/CheckExtendBooking/CheckExtendBooking.sh
 ```
 
 - cek list of cronjob
