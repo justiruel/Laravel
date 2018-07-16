@@ -11,9 +11,9 @@ https://gosigitgo.wordpress.com/2010/03/18/tutorial-penggunaan-crontab-scheduler
 chmod +x /home/sysadmin/Parking_Scheduler/CheckExtendBooking/CheckExtendBooking.sh
 ```
 
-- ketik sudo crontab -e
+- ketik sudo crontab -e 
 ```
-Tambahkan line :
+Tambahkan line (dieksekusi 5 menit sekali):
 */5 * * * * /home/sysadmin/Parking_Scheduler/CheckExtendBooking/CheckExtendBooking.sh
 ```
 
