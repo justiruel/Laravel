@@ -21,3 +21,6 @@ Tambahkan line (dieksekusi 5 menit sekali):
 ```
 sudo crontab -l
 ```
+
+# Catatan
+after edit file di crontab -e, cronjob akan otomatis tereksekusi tanpa harus restart atau apapun
