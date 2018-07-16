@@ -11,7 +11,7 @@ https://gosigitgo.wordpress.com/2010/03/18/tutorial-penggunaan-crontab-scheduler
 chmod +x /home/sysadmin/Parking_Scheduler/CheckExtendBooking/CheckExtendBooking.sh
 ```
 
-- ketik crontab -e
+- ketik sudo crontab -e
 ```
 Tambahkan line :
 5 * * * * /home/sysadmin/Parking_Scheduler/CheckExtendBooking/CheckExtendBooking.sh
@@ -19,5 +19,5 @@ Tambahkan line :
 
 - cek list of cronjob
 ```
-crontab -l
+sudo crontab -l
 ```
