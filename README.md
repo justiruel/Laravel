@@ -43,7 +43,7 @@ Bisa juga hasilnya diletakkan di folder Models caranya :
 php artisan make:model Models/Anggota
 ```
 Hasilnya : app/Models/Anggota.php (Model)<br/>
-
+model Anggota akan terkoneksi ke table anggotas, kecuali didefinisikan lain di dalam Anggota.php
 # Blade
 - Untuk membuat suatu view bisa di isi dengan syntaxt blade, rename view name menjadi <b>*.blade.php</b>
 - .blade view akan di-render menjadi php native untuk selanjutnya di eksekusi, lokasi render ada di <b>storage/framework/views/9316a91367544223c7eb6e4c3e30a8d44b85c1d9.php</b> 
