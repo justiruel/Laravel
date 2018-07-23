@@ -367,3 +367,4 @@ atau
 - .htaccess
 - Faker Generator
 - send mail
+- success flash message
