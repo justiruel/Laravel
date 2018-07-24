@@ -1,3 +1,6 @@
+# catatan 
+use App\Reports\Country\SalesByCountry; //link by namespace not by real path
+
 # Langkah instalasi Laravel
 
 ```
