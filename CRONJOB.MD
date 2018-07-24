@@ -6,6 +6,11 @@ https://gosigitgo.wordpress.com/2010/03/18/tutorial-penggunaan-crontab-scheduler
 ```
 
 ## Langkah
+
+buat file CheckExtendBooking.sh, isi dengan :
+```
+/usr/bin/curl -s https://innodev.vnetcloud.com/ParkingSystemAPI/public/cronjob/extend_booking_check >>/home/sysadmin/Parking_Scheduler/CheckExtendBooking/CheckExtendBooking.log
+```
 - Menjadikan .sh executable
 ```
 chmod +x /home/sysadmin/Parking_Scheduler/CheckExtendBooking/CheckExtendBooking.sh
