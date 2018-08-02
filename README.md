@@ -300,6 +300,10 @@ config/app.php
 ```
 'coba' => 'http://google.com'
 ```
+Jalankan
+```
+php artisan config:cache   --> harus di eksekusi setiap memodifikasi file config
+```
 controller
 ```
 echo config('app.coba'); atau Config::get('app.coba');
