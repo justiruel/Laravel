@@ -16,6 +16,8 @@ fclose($myfile);
 - buka .env edit APP_URL sesuai endpoint tanpa protokol (http://)
 ```
 APP_URL=localhost:8000
+atau
+APP_URL=
 ```
 - jalankan ini perubahan .env
 ```
