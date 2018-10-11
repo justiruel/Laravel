@@ -118,5 +118,14 @@ class CobaController extends Controller
 method ini dipakai untuk redirect jika pada app/http/requests/CobaRequest method failedValidation, dijalankan (rule tidak terpenuhi)
 - jalankan : php artisan laravel-swagger:generate
 - buka http://localhost:8000/swagger/
-
-hmmmmmmmmmm
+- untuk membuat agar support auth maka tambahkan kode berikut di swagger.json
+```
+"swagger": "2.0",
+"securityDefinitions": {
+    "Bearer": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "in": "header"
+    }
+  },
+```
