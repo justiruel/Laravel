@@ -13,6 +13,34 @@ $myfile = fopen("./public/swagger/swagger.json", "w") or die("Unable to open fil
 fwrite($myfile, $data);
 fclose($myfile);
 ```
+- buka vendor/mtrajano/laravel-swagger/src/generator.php
+```
+protected $route;
+.....
+foreach ($this->getAppRoutes() as $route) {
+    ......
+    $this->route = $route;
+}
+......
+$baseInfo = [
+    'swagger' => '2.0',
+    "securityDefinitions"=> [
+        "Bearer"=> [
+          "type"=> "apiKey",
+          "name"=> "Authorization",
+          "in"=> "header"
+        ]
+    ]
+    .....
+];
+......
+$this->docs['paths'][$this->uri][$this->method] = [
+    'description' => "$methodDescription {$this->uri}",
+    ......
+    'tags'=>[$this->route->action['middleware'][0]]
+];
+
+```
 - buka .env edit APP_URL sesuai endpoint tanpa protokol (http://)
 ```
 APP_URL=localhost:8000
