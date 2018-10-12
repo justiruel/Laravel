@@ -37,9 +37,18 @@ $baseInfo = [
 $this->docs['paths'][$this->uri][$this->method] = [
     'description' => "$methodDescription {$this->uri}",
     ......
-    'tags'=>[$this->route->action['middleware'][0]]
+    'tags'=>[isset($this->route->action['middleware'][1])?$this->route->action['middleware'][1]:$this->route->action['middleware'][0]] //untuk menangkap middleware ke 1 dijadikan tag, jika index 1 tidak ada maka gunakan middleware index ke 0
 ];
 
+```
+- buka file routes/api.php
+```
+Route::middleware(['Used API'])->group(function () {
+    // Taruh api yang ingin berada dalam tag "Used API" ke sini
+    //contoh
+    Route::post('/paymenttransaction/pay', 'PaymentTransactionController@pay');
+    Route::post('/paymenttransaction/reversalpayovo', 'PaymentTransactionController@reversalpayovo');
+});
 ```
 - buka .env edit APP_URL sesuai endpoint tanpa protokol (http://)
 ```
