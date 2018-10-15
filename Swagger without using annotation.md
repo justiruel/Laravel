@@ -55,7 +55,7 @@ protected function generatePath()
                 'description' => 'OK'
             ]
         ],
-        ***** 'tags'=>[$controllerWithMethod[0]] *****
+        __ 'tags'=>[$controllerWithMethod[0]] __
     ];
     .....
 }
