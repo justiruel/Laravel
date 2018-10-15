@@ -125,7 +125,14 @@ class CobaRequest extends FormRequest
     protected function failedValidation(Validator $validator)
     {
         $errors = (new ValidationException($validator))->errors();
-        throw new HttpResponseException(response()->json(['errors' => $errors
+        $error_key =  array_keys($errors);
+        $data = [];
+        foreach ($error_key as $value) {
+            array_push($data,$errors[$value][0]);
+        }
+        throw new HttpResponseException(response()->json([
+            "code" => "99",
+            'errors' => $data
         ], JsonResponse::HTTP_UNPROCESSABLE_ENTITY));
     }
 }
@@ -144,24 +151,6 @@ class CobaController extends Controller
     }
 }
 
-````````
-- buka app/Exceptions/Handler.php, tambahkan
-```````
-    public function render($request, Exception $e)
-    {
-        if ($request->ajax() || $request->wantsJson())
-        {
-            $json = [
-                'success' => false,
-                'error' => [
-                    'code' => $e->getCode(),
-                    'message' => $e->getMessage(),
-                ],
-            ];
-            return response()->json($json, 400);
-        }
-        return parent::render($request, $e);
-    }
 ````````
 method ini dipakai untuk redirect jika pada app/http/requests/CobaRequest method failedValidation, dijalankan (rule tidak terpenuhi)
 - jalankan : php artisan laravel-swagger:generate
