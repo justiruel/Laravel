@@ -43,10 +43,10 @@ $this->docs['paths'][$this->uri][$this->method] = [
 protected function generatePath()
 {
     .....
-    ** $controllers = isset($this->route->action["controller"])?$this->route->action["controller"]:"-";
+    $controllers = isset($this->route->action["controller"])?$this->route->action["controller"]:"-";
     $controllerWithMethod = explode("\\",$controllers);
     $controllerWithMethod = end($controllerWithMethod);
-    $controllerWithMethod = explode("@",$controllerWithMethod); **
+    $controllerWithMethod = explode("@",$controllerWithMethod);
 
     $this->docs['paths'][$this->uri][$this->method] = [
         'description' => "$methodDescription {$this->uri}",
@@ -55,7 +55,7 @@ protected function generatePath()
                 'description' => 'OK'
             ]
         ],
-        __ 'tags'=>[$controllerWithMethod[0]] __
+        'tags'=>[$controllerWithMethod[0]]
     ];
     .....
 }
