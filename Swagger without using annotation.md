@@ -2,11 +2,11 @@
 - pada dasarnya swagger menggenerate json dan param request tiap method API dari formRequest yang dipakai di tiap method
 ## Gunakan https://github.com/mtrajano/laravel-swagger
 - jalankan perintah 
-```
+``````
 composer require mtrajano/laravel-swagger
-```
+``````
 - buka vendor/mtrajano/laravel-swagger/src/formatters/JsonFromatter.php
-```
+``````
 //return json_encode($this->docs, JSON_PRETTY_PRINT);	        
 $data =  json_encode($this->docs, JSON_PRETTY_PRINT);
 $myfile = fopen("./public/swagger/swagger.json", "w") or die("Unable to open file!");
@@ -40,7 +40,27 @@ $this->docs['paths'][$this->uri][$this->method] = [
     'tags'=>[isset($this->route->action['middleware'][1])?$this->route->action['middleware'][1]:$this->route->action['middleware'][0]] //untuk menangkap middleware ke 1 dijadikan tag, jika index 1 tidak ada maka gunakan middleware index ke 0
 ];
 
-```
+protected function generatePath()
+{
+    .....
+    <b>$controllers = isset($this->route->action["controller"])?$this->route->action["controller"]:"-";
+    $controllerWithMethod = explode("\\",$controllers);
+    $controllerWithMethod = end($controllerWithMethod);
+    $controllerWithMethod = explode("@",$controllerWithMethod);</b>
+
+    $this->docs['paths'][$this->uri][$this->method] = [
+        'description' => "$methodDescription {$this->uri}",
+        'responses' => [
+            '200' => [
+                'description' => 'OK'
+            ]
+        ],
+        <b>'tags'=>[$controllerWithMethod[0]]</b>
+    ];
+    .....
+}
+
+````
 - buka file routes/api.php
 ```
 Route::middleware(['Used API'])->group(function () {
