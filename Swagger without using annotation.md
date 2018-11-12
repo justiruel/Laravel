@@ -131,6 +131,27 @@ class CobaRequest extends FormRequest
     }
 }
 ````````
+jika method failedValidation error gunakan :
+```````
+    protected function failedValidation(Validator $validator)
+    {
+        //$errors = (new ValidationException($validator))->errors();
+        $errors = $validator->errors();
+        $errors = json_decode(json_encode($errors),TRUE);
+        
+        $error_key =  array_keys($errors);
+        $data = [];
+        foreach ($error_key as $value) {
+            array_push($data,$errors[$value][0]);
+        }
+        throw new HttpResponseException(response()->json([
+            "code" => "99",
+            'errors' => $data
+        ], JsonResponse::HTTP_UNPROCESSABLE_ENTITY));
+    }
+```````
+
+
 method ini dipakai untuk redirect jika pada app/http/requests/CobaRequest method failedValidation, dijalankan (rule tidak terpenuhi)
 - buka controller, instance object $request dari class CobaRequest 
 ```````
