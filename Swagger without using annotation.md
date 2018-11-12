@@ -1,5 +1,6 @@
 # Swagger without using annotation
 - pada dasarnya swagger menggenerate json dan param request tiap method API dari formRequest yang dipakai di tiap method
+- saya coba library swagger ini hanya support untuk laravel >= 5.5
 ## Gunakan https://github.com/mtrajano/laravel-swagger
 - jalankan perintah 
 ``````
