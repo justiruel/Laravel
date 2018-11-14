@@ -1,6 +1,7 @@
 # catatan 
 ```
 use App\Reports\Country\SalesByCountry; -->link by namespace not by real path
+laravel 5.5 keatas harus pakai PHP >= 5.64
 ```
 
 # Langkah instalasi Laravel
